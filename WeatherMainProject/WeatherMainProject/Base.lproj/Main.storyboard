@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a9E-bT-Dwq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="zeh-mB-Fzv">
+            <objects>
+                <viewController id="a9E-bT-Dwq" customClass="ViewController" customModule="WeatherMainProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GOa-Nj-daA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8ct-oL-5X0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="822"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rCL-SU-uOg">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yLu-YS-R4B">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="auo-jO-PJZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1K-o8-BI5">
+                                <rect key="frame" x="354" y="822" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7dO-Gd-LPQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="9Mo-HW-siU"/>
+                                    <constraint firstAttribute="width" constant="40" id="AfQ-86-a7b"/>
+                                    <constraint firstAttribute="height" constant="40" id="t4d-zV-lEw"/>
+                                </constraints>
+                                <state key="normal">
+                                    <imageReference key="image" image="list.dash" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCityBtn:" destination="a9E-bT-Dwq" eventType="touchUpInside" id="8XF-vV-lJq"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="HH5-9w-EB3">
+                                <rect key="frame" x="60" y="822" width="294" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AG7-Be-YWl"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vho-76-Oq8"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="HH5-9w-EB3" firstAttribute="top" secondItem="8ct-oL-5X0" secondAttribute="bottom" id="5Ru-1W-zyq"/>
+                            <constraint firstItem="Vho-76-Oq8" firstAttribute="bottom" secondItem="HH5-9w-EB3" secondAttribute="bottom" id="J3e-9e-075"/>
+                            <constraint firstItem="Vho-76-Oq8" firstAttribute="bottom" secondItem="8ct-oL-5X0" secondAttribute="bottom" constant="40" id="NC1-Qy-l2s"/>
+                            <constraint firstItem="Vho-76-Oq8" firstAttribute="trailing" secondItem="M1K-o8-BI5" secondAttribute="trailing" constant="20" id="R88-5h-czZ"/>
+                            <constraint firstItem="HH5-9w-EB3" firstAttribute="leading" secondItem="Vho-76-Oq8" secondAttribute="leading" constant="60" id="bfr-fy-Ffd"/>
+                            <constraint firstItem="Vho-76-Oq8" firstAttribute="trailing" secondItem="8ct-oL-5X0" secondAttribute="trailing" id="gEo-PH-JQ5"/>
+                            <constraint firstItem="M1K-o8-BI5" firstAttribute="bottom" secondItem="Vho-76-Oq8" secondAttribute="bottom" id="h3O-Mz-05C"/>
+                            <constraint firstItem="8ct-oL-5X0" firstAttribute="top" secondItem="GOa-Nj-daA" secondAttribute="top" id="oSq-Zn-KS2"/>
+                            <constraint firstItem="8ct-oL-5X0" firstAttribute="leading" secondItem="Vho-76-Oq8" secondAttribute="leading" id="xWW-H8-06Y"/>
+                            <constraint firstItem="M1K-o8-BI5" firstAttribute="leading" secondItem="HH5-9w-EB3" secondAttribute="trailing" id="yz3-7n-akm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="weatherCollectionView" destination="8ct-oL-5X0" id="0GH-ut-4QZ"/>
+                        <outlet property="weatherPageControl" destination="HH5-9w-EB3" id="D39-du-KB9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cjk-61-jrE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-144.92753623188406" y="58.258928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

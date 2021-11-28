@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LastVerticalCVCell" customModule="WeatherMainProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="407" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYq-Zk-COD">
+                        <rect key="frame" x="362" y="12.5" width="30" height="24.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="MEx-dX-u89"/>
+                            <constraint firstAttribute="width" constant="30" id="iEt-Gw-Phr"/>
+                        </constraints>
+                        <state key="normal">
+                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                            <imageReference key="backgroundImage" image="magnifyingglass" catalog="system" symbolScale="small"/>
+                        </state>
+                        <connections>
+                            <action selector="addCityBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="6ta-e6-zPD"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="QYq-Zk-COD" secondAttribute="bottom" constant="10" id="4PM-JU-WKf"/>
+                <constraint firstItem="QYq-Zk-COD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Rka-LS-ble"/>
+                <constraint firstAttribute="trailing" secondItem="QYq-Zk-COD" secondAttribute="trailing" constant="15" id="Wbt-Wh-ygZ"/>
+            </constraints>
+            <size key="customSize" width="288" height="52"/>
+            <point key="canvasLocation" x="31" y="9"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
